@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-06T15:39:21.223Z",
+  "updatedAt": "2026-10-06T15:46:36.949Z",
   "repositories": [
     {
       "repository": "bytedance/deer-flow",
@@ -15,7 +15,7 @@
     },
     {
       "repository": "tt-a1i/archify",
-      "stars": 78531,
+      "stars": 78533,
       "contributions": [
         {
           "repository": "tt-a1i/archify",
@@ -135,5 +135,34 @@
         }
       ]
     }
+  ],
+  "watchedRepositories": [
+    "53AI/53AIHub",
+    "BerriAI/litellm",
+    "EvovexAI/EvoFlow",
+    "LazyAGI/LazyLLM",
+    "TencentCloud/Octop",
+    "TencentCloud/TencentDB-Agent-Memory",
+    "agno-agi/agno",
+    "aliyun/ai-agent-handbook",
+    "assistant-ui/assistant-ui",
+    "bytedance/deer-flow",
+    "ciouskeila-hue/github-register",
+    "cline/cline",
+    "coze-dev/coze-studio",
+    "grafana/grafana",
+    "iflytek/astron-agent",
+    "influxdata/influxdb",
+    "langchain-ai/docs",
+    "langchain-ai/langchain",
+    "langchain-ai/langgraph",
+    "microsoft/autogen",
+    "microsoft/semantic-kernel",
+    "ollama/ollama",
+    "oven-sh/bun",
+    "pola-rs/polars",
+    "pydantic/pydantic-ai",
+    "supabase/supabase",
+    "tt-a1i/archify"
   ]
 }
