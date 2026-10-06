@@ -1,5 +1,13 @@
 {
   "username": "Xx-173",
+  "watchedRepositories": [
+    "oven-sh/bun",
+    "pola-rs/polars",
+    "TencentCloud/TencentDB-Agent-Memory",
+    "TencentCloud/Octop",
+    "53AI/53AIHub",
+    "LazyAGI/LazyLLM"
+  ],
   "carryOverContributions": [
     {
       "repository": "tt-a1i/archify",

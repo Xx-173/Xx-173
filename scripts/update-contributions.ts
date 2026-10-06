@@ -3,14 +3,67 @@ import { fileURLToPath } from 'node:url';
 import { resolve } from 'node:path';
 
 type CarryOver = { repository: string; originalPullRequest: number; mergedPullRequest: number; authorCommit: string };
-type Config = { username: string; carryOverContributions: CarryOver[] };
+type Config = { username: string; carryOverContributions: CarryOver[]; watchedRepositories?: string[] };
 type Contribution = { repository: string; number: number; mergedAt: string; kind: 'direct' | 'carry-over'; originalPullRequest?: number; authorCommit?: string };
 type Repository = { repository: string; stars: number; contributions: Contribution[] };
 type SearchItem = { user: { login: string }; repository_url: string; number: number; pull_request?: { merged_at?: string } };
 type Get = (path: string) => Promise<any>;
+type Snapshot = { updatedAt: string; repositories: Repository[]; watchedRepositories?: string[] };
 
 export const START = '<!-- CONTRIBUTIONS:START -->';
 export const END = '<!-- CONTRIBUTIONS:END -->';
+
+// Some GitHub accounts cannot be used as an author search qualifier with an
+// installation token. Repository PR lists and public activity still work.
+export async function collectFromRepositories(config: Config, get: Get, previous: Snapshot) {
+  const watched = new Set([...config.watchedRepositories ?? [], ...previous.watchedRepositories ?? [], ...previous.repositories.map(repo => repo.repository)]);
+  const direct = new Map<string, SearchItem>();
+  for (const repo of previous.repositories) {
+    for (const contribution of repo.contributions.filter(item => item.kind === 'direct')) {
+      direct.set(`${repo.repository.toLowerCase()}#${contribution.number}`, {
+        user: { login: config.username }, repository_url: `https://api.github.com/repos/${repo.repository}`,
+        number: contribution.number, pull_request: { merged_at: contribution.mergedAt },
+      });
+    }
+  }
+  const own = (repository: string) => repository.split('/')[0].toLowerCase() === config.username.toLowerCase();
+  for (let page = 1; page <= 3; page++) {
+    const events = await get(`/users/${config.username}/events/public?per_page=100&page=${page}`);
+    if (!Array.isArray(events)) throw new Error('Invalid public activity response.');
+    for (const event of events) {
+      if (event.repo?.name && !own(event.repo.name)) watched.add(event.repo.name);
+    }
+    if (events.length < 100) break;
+  }
+  // Retain the verified historical snapshot; scan newly updated PRs with a
+  // 24-hour overlap to tolerate delayed public activity/search indexing.
+  const cutoff = new Date(previous.updatedAt).getTime() - 24 * 60 * 60 * 1000;
+  if (!Number.isFinite(cutoff)) throw new Error('Invalid previous snapshot timestamp.');
+  for (const repository of [...watched].filter(repo => !own(repo)).sort()) {
+    let complete = false;
+    for (let page = 1; page <= 20; page++) {
+      const pulls = await get(`/repos/${repository}/pulls?state=closed&sort=updated&direction=desc&per_page=100&page=${page}`);
+      if (!Array.isArray(pulls)) throw new Error('Invalid repository PR response.');
+      for (const pr of pulls) {
+        if (pr.user?.login?.toLowerCase() === config.username.toLowerCase() && pr.merged_at) {
+          direct.set(`${repository.toLowerCase()}#${pr.number}`, {
+            user: { login: pr.user.login }, repository_url: `https://api.github.com/repos/${repository}`,
+            number: pr.number, pull_request: { merged_at: pr.merged_at },
+          });
+        }
+      }
+      if (pulls.length < 100 || new Date(pulls.at(-1).updated_at).getTime() < cutoff) { complete = true; break; }
+    }
+    if (!complete) throw new Error(`PR pagination exceeded the safety limit for ${repository}; preserving the README.`);
+  }
+  const items = [...direct.values()];
+  const repositories = await collectContributions(config, async path => {
+    if (!path.startsWith('/search/issues')) return get(path);
+    const page = Number(new URL(`https://api.github.com${path}`).searchParams.get('page'));
+    return { total_count: items.length, incomplete_results: false, items: items.slice((page - 1) * 100, page * 100) };
+  });
+  return { repositories, watchedRepositories: [...watched].filter(repo => !own(repo)).sort() };
+}
 
 export async function collectContributions(config: Config, get: Get): Promise<Repository[]> {
   const entries = new Map<string, Contribution>();
@@ -115,18 +168,25 @@ async function main() {
   const config: Config = JSON.parse(await readFile(resolve(root, 'profile-config.json'), 'utf8'));
   const readmePath = resolve(root, 'README.md');
   const readme = await readFile(readmePath, 'utf8');
-  const repositories = await collectContributions(config, githubGet);
   const snapshotPath = resolve(root, 'data/contributions.json');
-  let previous;
+  let previous: Snapshot | undefined;
   try { previous = JSON.parse(await readFile(snapshotPath, 'utf8')); }
   catch (error) { if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error; }
-  const unchanged = JSON.stringify(previous?.repositories) === JSON.stringify(repositories);
-  const updatedAt = unchanged ? previous.updatedAt : new Date().toISOString();
+  let repositories: Repository[];
+  let watchedRepositories = previous?.watchedRepositories ?? [];
+  try { repositories = await collectContributions(config, githubGet); }
+  catch (error) {
+    if (!(error as Error).message.includes('HTTP 422 for /search/issues') || !previous) throw error;
+    console.log('Author search unavailable; syncing repository PRs and public activity.');
+    ({ repositories, watchedRepositories } = await collectFromRepositories(config, githubGet, previous));
+  }
+  const unchanged = JSON.stringify(previous?.repositories) === JSON.stringify(repositories) && JSON.stringify(previous?.watchedRepositories ?? []) === JSON.stringify(watchedRepositories);
+  const updatedAt = unchanged ? previous!.updatedAt : new Date().toISOString();
   const next = replaceContributions(readme, renderContributions(repositories, updatedAt));
   if (next !== readme) await writeFile(readmePath, next, 'utf8');
   if (!unchanged) {
     await mkdir(resolve(root, 'data'), { recursive: true });
-    await writeFile(snapshotPath, JSON.stringify({ updatedAt, repositories }, null, 2) + '\n', 'utf8');
+    await writeFile(snapshotPath, JSON.stringify({ updatedAt, repositories, watchedRepositories }, null, 2) + '\n', 'utf8');
   }
   console.log(next === readme && unchanged ? 'Contribution statistics unchanged.' : 'Contribution statistics updated.');
 }
