@@ -62,11 +62,12 @@
 
 ## 开源贡献
 
-已向 **7 个开源项目**贡献 **13 个已合并 PR**。
+已向 **8 个开源项目**贡献 **14 项已合入贡献**。
 
-| 项目 | Stars | 已合并 PR |
+| 项目 | Stars | 已合入贡献 |
 | :--- | ---: | ---: |
 | [bytedance/deer-flow](https://github.com/bytedance/deer-flow) | 83,444 | [1](https://github.com/bytedance/deer-flow/pulls?q=is%3Apr+is%3Amerged+author%3AXx-173) |
+| [tt-a1i/archify](https://github.com/tt-a1i/archify) | 78,525 | [1](https://github.com/tt-a1i/archify/pull/504) |
 | [cline/cline](https://github.com/cline/cline) | 69,939 | [1](https://github.com/cline/cline/pulls?q=is%3Apr+is%3Amerged+author%3AXx-173) |
 | [agno-agi/agno](https://github.com/agno-agi/agno) | 42,578 | [1](https://github.com/agno-agi/agno/pulls?q=is%3Apr+is%3Amerged+author%3AXx-173) |
 | [assistant-ui/assistant-ui](https://github.com/assistant-ui/assistant-ui) | 12,419 | [1](https://github.com/assistant-ui/assistant-ui/pulls?q=is%3Apr+is%3Amerged+author%3AXx-173) |
@@ -74,4 +75,4 @@
 | [langchain-ai/docs](https://github.com/langchain-ai/docs) | 424 | [3](https://github.com/langchain-ai/docs/pulls?q=is%3Apr+is%3Amerged+author%3AXx-173) |
 | [EvovexAI/EvoFlow](https://github.com/EvovexAI/EvoFlow) | 345 | [5](https://github.com/EvovexAI/EvoFlow/pulls?q=is%3Apr+is%3Amerged+author%3AXx-173) |
 
-<sub>统计更新于 2026-10-06 · 仅计入本人提交且 GitHub 标记为已合并的 PR；点击数量查看记录。</sub>
+<sub>统计更新于 2026-10-06 · 包含本人 13 个已合并 PR，以及 <a href="https://github.com/tt-a1i/archify/pull/502">archify #502</a> 经 <a href="https://github.com/tt-a1i/archify/pull/504">#504</a> 转接合入的 1 项贡献（保留作者署名）；点击数量查看记录。</sub>
