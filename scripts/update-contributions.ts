@@ -139,7 +139,7 @@ export function renderContributions(repositories: Repository[], updatedAt: strin
   const note = carry ? ` · 包含本人 ${direct} 个已合并 PR 和 ${carry} 项保留作者署名的转接合入贡献` : '';
   return [START, '', `已向 **${repositories.length} 个开源项目**贡献 **${direct + carry} 项已合入贡献**。`, '',
     '| 项目 | Stars | 已合入贡献 |', '| :--- | ---: | ---: |', ...rows, '',
-    `<sub>每 15 分钟自动同步 · 统计更新于 ${stamp}（北京时间）${note}。</sub>`, '', END].join('\n');
+    `<sub>每天自动同步 · 统计更新于 ${stamp}（北京时间）${note}。</sub>`, '', END].join('\n');
 }
 
 export function replaceContributions(readme: string, block: string): string {

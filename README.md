@@ -85,6 +85,6 @@
 | [langchain-ai/docs](https://github.com/langchain-ai/docs) | 424 | 3 |
 | [EvovexAI/EvoFlow](https://github.com/EvovexAI/EvoFlow) | 345 | 5 |
 
-<sub>每 15 分钟自动同步 · 统计更新于 2026-10-06 23:46（北京时间） · 包含本人 13 个已合并 PR 和 1 项保留作者署名的转接合入贡献。</sub>
+<sub>每天自动同步 · 统计更新于 2026-10-06 23:46（北京时间） · 包含本人 13 个已合并 PR 和 1 项保留作者署名的转接合入贡献。</sub>
 
 <!-- CONTRIBUTIONS:END -->

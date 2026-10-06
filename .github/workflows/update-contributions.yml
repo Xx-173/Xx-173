@@ -2,7 +2,7 @@ name: Update profile contributions
 
 on:
   schedule:
-    - cron: '7,22,37,52 * * * *'
+    - cron: '7 0 * * *' # 08:07 Asia/Shanghai
   workflow_dispatch:
   push:
     branches: [main]
