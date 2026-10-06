@@ -4,13 +4,21 @@
 
 **构建实用的 AI Agent 产品，从运行时到业务工作流。**
 
-关注 Agent 工程、工具集成与业务自动化，也参与开源项目的 Bug 修复和文档完善。
+关注 Agent 工程、工具集成与业务自动化，参与开源项目的 Bug 修复。
+
+积极拥抱新技术。
 
 <p>
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
   <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />
   <img src="https://img.shields.io/badge/Electron-2B2E3A?style=flat-square&logo=electron&logoColor=9FEAF9" alt="Electron" />
+  <br />
   <img src="https://img.shields.io/badge/Agent%20%2F%20MCP-8250DF?style=flat-square" alt="Agent / MCP" />
+  <img src="https://img.shields.io/badge/Skills-0F766E?style=flat-square" alt="Skills" />
+  <img src="https://img.shields.io/badge/Runtime-334155?style=flat-square" alt="Runtime" />
+  <img src="https://img.shields.io/badge/Pi-D97706?style=flat-square" alt="Pi" />
 </p>
 
 [个人项目](#个人项目) · [开源贡献](#开源贡献)
