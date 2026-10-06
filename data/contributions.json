@@ -1,0 +1,139 @@
+{
+  "updatedAt": "2026-10-06T15:39:21.223Z",
+  "repositories": [
+    {
+      "repository": "bytedance/deer-flow",
+      "stars": 83444,
+      "contributions": [
+        {
+          "repository": "bytedance/deer-flow",
+          "number": 5667,
+          "mergedAt": "2026-10-03T06:35:10Z",
+          "kind": "direct"
+        }
+      ]
+    },
+    {
+      "repository": "tt-a1i/archify",
+      "stars": 78531,
+      "contributions": [
+        {
+          "repository": "tt-a1i/archify",
+          "number": 504,
+          "mergedAt": "2026-09-22T14:56:43Z",
+          "kind": "carry-over",
+          "originalPullRequest": 502,
+          "authorCommit": "31df9123a0b5ae68484b6e25e0ef9a82249e22ad"
+        }
+      ]
+    },
+    {
+      "repository": "cline/cline",
+      "stars": 69938,
+      "contributions": [
+        {
+          "repository": "cline/cline",
+          "number": 14826,
+          "mergedAt": "2026-10-05T07:08:09Z",
+          "kind": "direct"
+        }
+      ]
+    },
+    {
+      "repository": "agno-agi/agno",
+      "stars": 42579,
+      "contributions": [
+        {
+          "repository": "agno-agi/agno",
+          "number": 10788,
+          "mergedAt": "2026-10-05T07:24:14Z",
+          "kind": "direct"
+        }
+      ]
+    },
+    {
+      "repository": "assistant-ui/assistant-ui",
+      "stars": 12419,
+      "contributions": [
+        {
+          "repository": "assistant-ui/assistant-ui",
+          "number": 8805,
+          "mergedAt": "2026-10-05T20:24:43Z",
+          "kind": "direct"
+        }
+      ]
+    },
+    {
+      "repository": "aliyun/ai-agent-handbook",
+      "stars": 1151,
+      "contributions": [
+        {
+          "repository": "aliyun/ai-agent-handbook",
+          "number": 13,
+          "mergedAt": "2026-09-30T00:13:56Z",
+          "kind": "direct"
+        }
+      ]
+    },
+    {
+      "repository": "langchain-ai/docs",
+      "stars": 424,
+      "contributions": [
+        {
+          "repository": "langchain-ai/docs",
+          "number": 6097,
+          "mergedAt": "2026-09-28T12:19:57Z",
+          "kind": "direct"
+        },
+        {
+          "repository": "langchain-ai/docs",
+          "number": 6343,
+          "mergedAt": "2026-10-01T19:17:14Z",
+          "kind": "direct"
+        },
+        {
+          "repository": "langchain-ai/docs",
+          "number": 6366,
+          "mergedAt": "2026-10-01T18:43:10Z",
+          "kind": "direct"
+        }
+      ]
+    },
+    {
+      "repository": "EvovexAI/EvoFlow",
+      "stars": 345,
+      "contributions": [
+        {
+          "repository": "EvovexAI/EvoFlow",
+          "number": 22,
+          "mergedAt": "2026-09-25T17:03:26Z",
+          "kind": "direct"
+        },
+        {
+          "repository": "EvovexAI/EvoFlow",
+          "number": 23,
+          "mergedAt": "2026-09-25T17:03:20Z",
+          "kind": "direct"
+        },
+        {
+          "repository": "EvovexAI/EvoFlow",
+          "number": 55,
+          "mergedAt": "2026-09-29T02:57:22Z",
+          "kind": "direct"
+        },
+        {
+          "repository": "EvovexAI/EvoFlow",
+          "number": 56,
+          "mergedAt": "2026-09-29T02:57:56Z",
+          "kind": "direct"
+        },
+        {
+          "repository": "EvovexAI/EvoFlow",
+          "number": 57,
+          "mergedAt": "2026-09-29T02:58:02Z",
+          "kind": "direct"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+name: Update profile contributions
+
+on:
+  schedule:
+    - cron: '7,22,37,52 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/update-contributions.yml'
+      - 'scripts/update-contributions*.ts'
+      - 'profile-config.json'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-contribution-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: main
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '24'
+      - name: Verify updater
+        run: node --test scripts/update-contributions.test.ts
+      - name: Fetch merged contributions and stars
+        run: node scripts/update-contributions.ts
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Commit changed statistics
+        run: |
+          if [ -z "$(git status --porcelain -- README.md data/contributions.json)" ]; then
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md data/contributions.json
+          git commit -m 'profile: refresh merged contribution statistics'
+          git push origin HEAD:main
