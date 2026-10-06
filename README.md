@@ -76,8 +76,8 @@
 
 | 项目 | Stars | 已合入贡献 |
 | :--- | ---: | ---: |
-| [bytedance/deer-flow](https://github.com/bytedance/deer-flow) | 83,444 | 1 |
-| [tt-a1i/archify](https://github.com/tt-a1i/archify) | 78,533 | 1 |
+| [bytedance/deer-flow](https://github.com/bytedance/deer-flow) | 83,445 | 1 |
+| [tt-a1i/archify](https://github.com/tt-a1i/archify) | 78,535 | 1 |
 | [cline/cline](https://github.com/cline/cline) | 69,938 | 1 |
 | [agno-agi/agno](https://github.com/agno-agi/agno) | 42,579 | 1 |
 | [assistant-ui/assistant-ui](https://github.com/assistant-ui/assistant-ui) | 12,419 | 1 |
@@ -85,6 +85,6 @@
 | [langchain-ai/docs](https://github.com/langchain-ai/docs) | 424 | 3 |
 | [EvovexAI/EvoFlow](https://github.com/EvovexAI/EvoFlow) | 345 | 5 |
 
-<sub>每天自动同步 · 统计更新于 2026-10-06 23:46（北京时间） · 包含本人 13 个已合并 PR 和 1 项保留作者署名的转接合入贡献。</sub>
+<sub>每天自动同步 · 统计更新于 2026-10-06 23:50（北京时间） · 包含本人 13 个已合并 PR 和 1 项保留作者署名的转接合入贡献。</sub>
 
 <!-- CONTRIBUTIONS:END -->
