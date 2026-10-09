@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-08T05:55:08.951Z",
+  "updatedAt": "2026-10-09T06:01:28.810Z",
   "repositories": [
     {
       "repository": "bytedance/deer-flow",
-      "stars": 83483,
+      "stars": 83553,
       "contributions": [
         {
           "repository": "bytedance/deer-flow",
@@ -15,7 +15,7 @@
     },
     {
       "repository": "tt-a1i/archify",
-      "stars": 79405,
+      "stars": 80426,
       "contributions": [
         {
           "repository": "tt-a1i/archify",
@@ -29,7 +29,7 @@
     },
     {
       "repository": "cline/cline",
-      "stars": 70003,
+      "stars": 70039,
       "contributions": [
         {
           "repository": "cline/cline",
@@ -41,7 +41,7 @@
     },
     {
       "repository": "agno-agi/agno",
-      "stars": 42609,
+      "stars": 42629,
       "contributions": [
         {
           "repository": "agno-agi/agno",
@@ -53,7 +53,7 @@
     },
     {
       "repository": "assistant-ui/assistant-ui",
-      "stars": 12439,
+      "stars": 12456,
       "contributions": [
         {
           "repository": "assistant-ui/assistant-ui",
@@ -65,7 +65,7 @@
     },
     {
       "repository": "aliyun/ai-agent-handbook",
-      "stars": 1203,
+      "stars": 1277,
       "contributions": [
         {
           "repository": "aliyun/ai-agent-handbook",
@@ -77,7 +77,7 @@
     },
     {
       "repository": "langchain-ai/docs",
-      "stars": 425,
+      "stars": 426,
       "contributions": [
         {
           "repository": "langchain-ai/docs",
@@ -107,7 +107,7 @@
     },
     {
       "repository": "EvovexAI/EvoFlow",
-      "stars": 348,
+      "stars": 351,
       "contributions": [
         {
           "repository": "EvovexAI/EvoFlow",
@@ -165,9 +165,12 @@
     "microsoft/autogen",
     "microsoft/semantic-kernel",
     "ollama/ollama",
+    "openai/openai-python",
     "oven-sh/bun",
     "pola-rs/polars",
+    "psf/requests",
     "pydantic/pydantic-ai",
+    "shy3130/tick-stock-panel",
     "supabase/supabase",
     "tt-a1i/archify"
   ]
