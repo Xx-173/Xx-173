@@ -32,7 +32,7 @@
 <table>
   <tr>
     <td colspan="2">
-      <h3><a href="https://github.com/Xx-173/Felix">Felix</a></h3>
+      <h3><a href="https://github.com/XZQ173/Felix">Felix</a></h3>
       <p><strong>本地优先的 AI 投资研究工作台</strong></p>
       <p>将行情、投资组合与 Agent 副驾驶放进同一个桌面研究环境，支持基于证据的报告、投资论点与变化追踪。</p>
       <p><code>投资研究</code> <code>Electron</code> <code>Pi Agent Runtime</code></p>
@@ -40,13 +40,13 @@
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/Xx-173/salesclaw-commerce">SalesClaw Commerce</a></h3>
+      <h3><a href="https://github.com/XZQ173/salesclaw-commerce">SalesClaw Commerce</a></h3>
       <p><strong>面向多渠道零售的数字员工平台</strong></p>
       <p>基于 SalesClaw，围绕商品、营销、客服、订单与履约组织工作流，提供店铺隔离、业务事件接入和经营视图。</p>
       <p><code>零售工作流</code> <code>事件 API</code> <code>Workspace 隔离</code></p>
     </td>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/Xx-173/salesclaw">SalesClaw</a></h3>
+      <h3><a href="https://github.com/XZQ173/salesclaw">SalesClaw</a></h3>
       <p><strong>自托管 Agent 运行与治理基座</strong></p>
       <p>统一管理 Agent、工作区、会话、记忆、工具与自动化任务，支持多用户权限、审计及 Host / Docker 双执行模式。</p>
       <p><code>Agent Runtime</code> <code>Skills / MCP</code> <code>权限与审计</code></p>
@@ -54,13 +54,13 @@
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/Xx-173/ai-workbench-desensitized">AI Workbench</a></h3>
+      <h3><a href="https://github.com/XZQ173/ai-workbench-desensitized">AI Workbench</a></h3>
       <p><strong>多 Agent 接入与治理工作台</strong></p>
       <p>基于 Craft Agents 扩展，统一接入 Python、HTTP、Dify、Coze 与 MCP Agent，提供凭据引用、任务隔离和团队用量统计。</p>
       <p><code>Craft Agents 扩展</code> <code>Manifest</code> <code>多 Agent 接入</code></p>
     </td>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/Xx-173/ai-sales-agent">AI Sales Agent</a></h3>
+      <h3><a href="https://github.com/XZQ173/ai-sales-agent">AI Sales Agent</a></h3>
       <p><strong>可审计的销售 SOP 执行服务</strong></p>
       <p>基于 SalesClaw 编排 D1–D20 销售流程，管理客户状态、Outbox、回执与重试，并提供同意校验、频控和人工接管。</p>
       <p><code>销售 SOP</code> <code>SQLite / Outbox</code> <code>HMAC</code></p>
