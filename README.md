@@ -76,15 +76,15 @@
 
 | 项目 | Stars | 已合入贡献 |
 | :--- | ---: | ---: |
-| [bytedance/deer-flow](https://github.com/bytedance/deer-flow) | 83,553 | 1 |
-| [tt-a1i/archify](https://github.com/tt-a1i/archify) | 80,426 | 1 |
-| [cline/cline](https://github.com/cline/cline) | 70,039 | 1 |
-| [agno-agi/agno](https://github.com/agno-agi/agno) | 42,629 | 1 |
-| [assistant-ui/assistant-ui](https://github.com/assistant-ui/assistant-ui) | 12,456 | 1 |
-| [aliyun/ai-agent-handbook](https://github.com/aliyun/ai-agent-handbook) | 1,277 | 1 |
+| [bytedance/deer-flow](https://github.com/bytedance/deer-flow) | 83,602 | 1 |
+| [tt-a1i/archify](https://github.com/tt-a1i/archify) | 81,327 | 1 |
+| [cline/cline](https://github.com/cline/cline) | 70,090 | 1 |
+| [agno-agi/agno](https://github.com/agno-agi/agno) | 42,644 | 1 |
+| [assistant-ui/assistant-ui](https://github.com/assistant-ui/assistant-ui) | 12,467 | 1 |
+| [aliyun/ai-agent-handbook](https://github.com/aliyun/ai-agent-handbook) | 1,327 | 1 |
 | [langchain-ai/docs](https://github.com/langchain-ai/docs) | 426 | 4 |
-| [EvovexAI/EvoFlow](https://github.com/EvovexAI/EvoFlow) | 351 | 5 |
+| [EvovexAI/EvoFlow](https://github.com/EvovexAI/EvoFlow) | 352 | 5 |
 
-<sub>每天自动同步 · 统计更新于 2026-10-09 14:01（北京时间） · 包含本人 14 个已合并 PR 和 1 项保留作者署名的转接合入贡献。</sub>
+<sub>每天自动同步 · 统计更新于 2026-10-10 13:44（北京时间） · 包含本人 14 个已合并 PR 和 1 项保留作者署名的转接合入贡献。</sub>
 
 <!-- CONTRIBUTIONS:END -->
